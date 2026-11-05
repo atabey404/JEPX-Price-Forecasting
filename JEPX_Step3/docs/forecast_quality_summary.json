@@ -1,0 +1,17 @@
+{
+  "kind": "forecast",
+  "rows": 48825,
+  "start": "2026-04-04 00:00:00+09:00",
+  "end": "2026-11-07 00:00:00+09:00",
+  "point_count": 9,
+  "missing": {
+    "temperature_2m": 0,
+    "relative_humidity_2m": 0,
+    "wind_speed_10m": 0,
+    "wind_speed_100m": 0,
+    "shortwave_radiation": 0,
+    "cloud_cover": 0,
+    "precipitation": 0
+  },
+  "duplicate_keys": 0
+}

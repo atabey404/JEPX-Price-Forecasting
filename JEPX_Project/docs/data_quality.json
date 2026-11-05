@@ -1,0 +1,250 @@
+{
+  "rows_wide": 378672,
+  "rows_long": 3408048,
+  "delivery_start": "2005-04-02",
+  "delivery_end": "2026-11-06",
+  "days": 7889,
+  "duplicate_key_count": 0,
+  "duplicate_key_examples": [],
+  "missing_dates": [],
+  "days_not_48_slots": {},
+  "missing_values": {
+    "sell_bid_volume_kwh": 0,
+    "buy_bid_volume_kwh": 0,
+    "total_volume_kwh": 0,
+    "system_price_jpy_kwh": 0,
+    "hokkaido_price_jpy_kwh": 960,
+    "tohoku_price_jpy_kwh": 0,
+    "tokyo_price_jpy_kwh": 3744,
+    "chubu_price_jpy_kwh": 0,
+    "hokuriku_price_jpy_kwh": 0,
+    "kansai_price_jpy_kwh": 0,
+    "chugoku_price_jpy_kwh": 0,
+    "shikoku_price_jpy_kwh": 0,
+    "kyushu_price_jpy_kwh": 0,
+    "sell_block_bid_volume_kwh": 138576,
+    "sell_block_contract_volume_kwh": 138576,
+    "buy_block_bid_volume_kwh": 213552,
+    "buy_block_contract_volume_kwh": 213552
+  },
+  "numeric_ranges": {
+    "sell_bid_volume_kwh": [
+      72000.0,
+      50469050.0
+    ],
+    "buy_bid_volume_kwh": [
+      23000.0,
+      48298700.0
+    ],
+    "total_volume_kwh": [
+      0.0,
+      38741300.0
+    ],
+    "system_price_jpy_kwh": [
+      0.01,
+      251.0
+    ],
+    "hokkaido_price_jpy_kwh": [
+      0.0,
+      252.0
+    ],
+    "tohoku_price_jpy_kwh": [
+      0.0,
+      252.0
+    ],
+    "tokyo_price_jpy_kwh": [
+      0.0,
+      252.0
+    ],
+    "chubu_price_jpy_kwh": [
+      0.0,
+      242.21
+    ],
+    "hokuriku_price_jpy_kwh": [
+      0.0,
+      242.21
+    ],
+    "kansai_price_jpy_kwh": [
+      0.0,
+      242.21
+    ],
+    "chugoku_price_jpy_kwh": [
+      0.0,
+      242.21
+    ],
+    "shikoku_price_jpy_kwh": [
+      0.0,
+      242.21
+    ],
+    "kyushu_price_jpy_kwh": [
+      0.0,
+      242.21
+    ],
+    "sell_block_bid_volume_kwh": [
+      0.0,
+      21357300.0
+    ],
+    "sell_block_contract_volume_kwh": [
+      0.0,
+      10062800.0
+    ],
+    "buy_block_bid_volume_kwh": [
+      0.0,
+      8099350.0
+    ],
+    "buy_block_contract_volume_kwh": [
+      0.0,
+      7312250.0
+    ]
+  },
+  "source_files": [
+    {
+      "file": "spot_summary_2005.csv",
+      "rows": 17472,
+      "start": "2005-04-02",
+      "end": "2006-03-31"
+    },
+    {
+      "file": "spot_summary_2006.csv",
+      "rows": 17520,
+      "start": "2006-04-01",
+      "end": "2007-03-31"
+    },
+    {
+      "file": "spot_summary_2007.csv",
+      "rows": 17568,
+      "start": "2007-04-01",
+      "end": "2008-03-31"
+    },
+    {
+      "file": "spot_summary_2008.csv",
+      "rows": 17520,
+      "start": "2008-04-01",
+      "end": "2009-03-31"
+    },
+    {
+      "file": "spot_summary_2009.csv",
+      "rows": 17520,
+      "start": "2009-04-01",
+      "end": "2010-03-31"
+    },
+    {
+      "file": "spot_summary_2010.csv",
+      "rows": 17520,
+      "start": "2010-04-01",
+      "end": "2011-03-31"
+    },
+    {
+      "file": "spot_summary_2011.csv",
+      "rows": 17568,
+      "start": "2011-04-01",
+      "end": "2012-03-31"
+    },
+    {
+      "file": "spot_summary_2012.csv",
+      "rows": 17520,
+      "start": "2012-04-01",
+      "end": "2013-03-31"
+    },
+    {
+      "file": "spot_summary_2013.csv",
+      "rows": 17520,
+      "start": "2013-04-01",
+      "end": "2014-03-31"
+    },
+    {
+      "file": "spot_summary_2014.csv",
+      "rows": 17520,
+      "start": "2014-04-01",
+      "end": "2015-03-31"
+    },
+    {
+      "file": "spot_summary_2015.csv",
+      "rows": 17568,
+      "start": "2015-04-01",
+      "end": "2016-03-31"
+    },
+    {
+      "file": "spot_summary_2016.csv",
+      "rows": 17520,
+      "start": "2016-04-01",
+      "end": "2017-03-31"
+    },
+    {
+      "file": "spot_summary_2017.csv",
+      "rows": 17520,
+      "start": "2017-04-01",
+      "end": "2018-03-31"
+    },
+    {
+      "file": "spot_summary_2018.csv",
+      "rows": 17520,
+      "start": "2018-04-01",
+      "end": "2019-03-31"
+    },
+    {
+      "file": "spot_summary_2019.csv",
+      "rows": 17568,
+      "start": "2019-04-01",
+      "end": "2020-03-31"
+    },
+    {
+      "file": "spot_summary_2020.csv",
+      "rows": 17520,
+      "start": "2020-04-01",
+      "end": "2021-03-31"
+    },
+    {
+      "file": "spot_summary_2021.csv",
+      "rows": 17520,
+      "start": "2021-04-01",
+      "end": "2022-03-31"
+    },
+    {
+      "file": "spot_summary_2022.csv",
+      "rows": 17520,
+      "start": "2022-04-01",
+      "end": "2023-03-31"
+    },
+    {
+      "file": "spot_summary_2023.csv",
+      "rows": 17568,
+      "start": "2023-04-01",
+      "end": "2024-03-31"
+    },
+    {
+      "file": "spot_summary_2024.csv",
+      "rows": 17520,
+      "start": "2024-04-01",
+      "end": "2025-03-31"
+    },
+    {
+      "file": "spot_summary_2025.csv",
+      "rows": 17520,
+      "start": "2025-04-01",
+      "end": "2026-03-31"
+    },
+    {
+      "file": "spot_summary_2026.csv",
+      "rows": 10560,
+      "start": "2026-04-01",
+      "end": "2026-11-06"
+    }
+  ],
+  "missing_price_date_ranges": {
+    "tokyo": [
+      {
+        "start": "2011-03-15",
+        "end": "2011-05-31",
+        "days": 78
+      }
+    ],
+    "hokkaido": [
+      {
+        "start": "2018-09-07",
+        "end": "2018-09-26",
+        "days": 20
+      }
+    ]
+  }
+}

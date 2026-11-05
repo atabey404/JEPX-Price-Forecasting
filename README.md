@@ -1,2 +1,82 @@
-# JEPX-Price-Forecasting
-Japan JEPX day-ahead electricity price forecasting: market data, weather archives, and reproducible research for Tokyo, Kansai, and Kyushu.
+<div align="center">
+
+# 日本 JEPX 日前电价预测
+
+**从市场机制到可追溯的数据，再到严格按时点验证的价格预测。**
+
+**简体中文** · [English](README.en.md) · [日本語](README.ja.md)
+
+[数据包下载](https://github.com/atabey404/JEPX-Price-Forecasting/releases/tag/v0.2.0-data-20261105) · [数据说明](docs/DATA_NOTES.md) · [后续计划](docs/ROADMAP.md)
+
+电力市场 · 时间序列 · 气象数据 · 可复现研究
+
+</div>
+
+## 项目简介
+
+一个逐步推进的日本卸电力交易所（JEPX）日前电价预测研究项目。目标是预测次日48个半小时时段的 System Price 与区域价格；初期重点研究 **Tokyo、Kansai、Kyushu**，价格底座保留全部9个区域。
+
+**当前完成的是数据准备阶段，尚未训练或验证价格预测模型。** 本项目不展示虚构的预测精度，也不将历史实际值冒充日前已知输入。
+
+## 当前成果
+
+数据快照日期：**2026-11-05**。交付日期和时段使用日本时间 `Asia/Tokyo`。
+
+| 模块 | 覆盖与规模 | 状态 |
+| --- | --- | --- |
+| JEPX价格与成交量 | 2005-04-02—2026-11-06；22个年度文件，378,672条半小时记录 | 已下载、合并、检查 |
+| 三地供需与发电实际 | 2016年4月起；148个CSV，350,669条原始粒度记录 | 已统一字段与单位 |
+| 历史天气参考 | 9个代表地点；835,056条ERA5小时记录 | 完整日期至2026-10-30；10月31日尾部缺135行 |
+| 固定批次天气预报 | 2026-04-04—2026-11-06，217个交付日；46,872条目标日小时记录 | 7个变量完整；9日使用更早批次 |
+| 供需预测发布时间核查 | 2026年10月，93份日文件、4,464个时段 | 所检查归档版本均排除出严格日前回测输入 |
+
+天气预报表另保留1,953条次日00:00辅助记录，用于正确对齐小时平均辐射。它们不计入46,872条目标日记录。
+
+## 数据包与代码
+
+完整数据保存在 [Releases](https://github.com/atabey404/JEPX-Price-Forecasting/releases/tag/v0.2.0-data-20261105) 的三个ZIP中，包含原始文件、标准化数据、质量检查和脚本。仓库直接提供代码与关键检查结果；[ARTIFACTS.json](docs/ARTIFACTS.json) 记录下载地址、大小和SHA256。
+
+| 目录 | 用途 |
+| --- | --- |
+| `JEPX_Project/` | 官方价格下载、宽表/区域长表与48时段检查 |
+| `JEPX_Step2/` | 东京、关西、九州的需求与发电实际数据 |
+| `JEPX_Step3/` | ERA5参考、GFS逐批次预报与发布时间核查 |
+| `docs/` | 数据边界、来源与后续计划 |
+
+## 本地使用
+
+安装 Python 3.11+，克隆仓库并安装依赖：
+
+```sh
+git clone https://github.com/atabey404/JEPX-Price-Forecasting.git
+cd JEPX-Price-Forecasting
+python -m pip install -r requirements.txt
+```
+
+下载三个Release数据包，**解压到仓库根目录，保留各包顶层目录名**。归档包含完整的原始数据和来源快照，部分脚本依赖这些文件。随后可复算：
+
+```sh
+python JEPX_Project/scripts/process_validate.py
+python JEPX_Step2/scripts/normalize_supply.py
+python JEPX_Step2/scripts/validate_supply.py
+python JEPX_Step3/scripts/normalize_weather.py
+python JEPX_Step3/scripts/validate_step3.py
+```
+
+下载与缺失批次处理脚本也随包提供。它们访问外部网站，受接口限频、历史覆盖和后续修订影响；复算已下载快照与重新下载最新版是不同操作。
+
+## 预测时点与限制
+
+- 日前竞价截止按交付日前一天 **10:00 JST**。前一天傍晚发布的数据赶不上这个时点；“日前发布”不等于“竞价前可用”。
+- GFS通常选择前两天12:00 UTC初始化的批次，采用**12小时计算/发布延迟假设**；历史服务器首次可用时间尚未验证，因此不能宣称已完全证明无未来数据泄漏。
+- ERA5是事后再分析，不是当时发布的天气预报。目标日实际供需和发电量只用于研究、验证，或经可用性约束的滞后特征。
+- 三地较早供需数据是小时粒度，近年是半小时粒度，分别保存；九州2024年3月存在跨粒度重叠，不可重复累计。
+- 9个天气地点是初步格点特征，尚未按负荷或新能源装机加权，不能当作精确的区域平均天气。
+
+## 下一步
+
+建立字段级可用性规则和首版主数据表，先做日历/历史价格基线，再在明确的发布时间假设下加入天气，开展逐日滚动验证；区域负荷及风光预测还需获得竞价前可用的版本。
+
+## 来源与使用
+
+主要来源为 JEPX、TEPCO、关西电力送配电、九州电力送配电，以及 Open-Meteo 提供的 NOAA GFS 与 ECMWF/Copernicus ERA5。入口见[来源说明](docs/SOURCES.md)。原始文件保留官方字段和原语言，不因本仓库公开而改变第三方数据的权利或使用条款。原归档中的中文操作说明予以保留；本项目主页分别提供中、英、日文版本。

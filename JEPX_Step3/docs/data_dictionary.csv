@@ -1,0 +1,17 @@
+field,unit,definition_zh
+temperature_2m,°C,2米气温
+relative_humidity_2m,%,2米相对湿度
+wind_speed_10m,m/s,10米风速
+wind_speed_100m,m/s,接口输出100米风速，可能包含服务端派生
+shortwave_radiation,W/m²,有效时刻之前一小时的平均短波辐射
+cloud_cover,%,总云量
+precipitation,mm,小时降水量
+valid_time_jst,JST,气象有效时刻，按变量区分点值或区间值
+run_initialization_time_jst,JST,模型初始化时间，不等于发布时间
+assumed_available_time_jst,JST,初始化加12小时的研究假设
+bid_cutoff_jst,JST,目标交付日前一天10:00
+extra_lag_days,day,向更早批次回退的天数
+strict_availability_verified,boolean,历史首次可用时间是否验证；本包为false
+eligible_under_12h_lag_assumption,boolean,仅在12小时发布延迟假设下符合截止
+is_complete_weather_row,boolean,7个变量是否全部有值
+target_day_hour,boolean,是否属于目标日，次日00:00辅助记录为false

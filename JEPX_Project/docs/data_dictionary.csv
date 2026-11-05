@@ -1,0 +1,21 @@
+field,source_column,unit,note
+datetime_jst,derived,ISO8601 UTC+09:00,interval start
+delivery_date,受渡日,date,Japan delivery date
+time_slot,時刻コード,1..48,1=00:00–00:30; 48=23:30–24:00
+sell_bid_volume_kwh,売り入札量(kWh),kWh,National market volume; never sum repeated volumes across areas
+buy_bid_volume_kwh,買い入札量(kWh),kWh,National market volume; never sum repeated volumes across areas
+total_volume_kwh,約定総量(kWh),kWh,National market volume; never sum repeated volumes across areas
+system_price_jpy_kwh,システムプライス(円/kWh),JPY/kWh,
+hokkaido_price_jpy_kwh,エリアプライス北海道(円/kWh),JPY/kWh,
+tohoku_price_jpy_kwh,エリアプライス東北(円/kWh),JPY/kWh,
+tokyo_price_jpy_kwh,エリアプライス東京(円/kWh),JPY/kWh,
+chubu_price_jpy_kwh,エリアプライス中部(円/kWh),JPY/kWh,
+hokuriku_price_jpy_kwh,エリアプライス北陸(円/kWh),JPY/kWh,
+kansai_price_jpy_kwh,エリアプライス関西(円/kWh),JPY/kWh,
+chugoku_price_jpy_kwh,エリアプライス中国(円/kWh),JPY/kWh,
+shikoku_price_jpy_kwh,エリアプライス四国(円/kWh),JPY/kWh,
+kyushu_price_jpy_kwh,エリアプライス九州(円/kWh),JPY/kWh,
+sell_block_bid_volume_kwh,売りブロック入札総量(kWh),kWh,National market volume; never sum repeated volumes across areas
+sell_block_contract_volume_kwh,売りブロック約定総量(kWh),kWh,National market volume; never sum repeated volumes across areas
+buy_block_bid_volume_kwh,買いブロック入札総量(kWh),kWh,National market volume; never sum repeated volumes across areas
+buy_block_contract_volume_kwh,買いブロック約定総量(kWh),kWh,National market volume; never sum repeated volumes across areas

@@ -1,0 +1,56 @@
+{
+  "total_rows": 350669,
+  "half_hour_rows": 142469,
+  "hour_rows": 208200,
+  "raw_files": 148,
+  "negative_solar_rows": [
+    {
+      "area": "Kyushu",
+      "datetime_jst": "2026-10-05 23:30:00+09:00",
+      "solar_actual_mw": -2,
+      "source_file": "data/raw/Kyushu/eria_jukyu_202610_09.csv"
+    },
+    {
+      "area": "Kyushu",
+      "datetime_jst": "2026-10-18 17:30:00+09:00",
+      "solar_actual_mw": -8,
+      "source_file": "data/raw/Kyushu/eria_jukyu_202610_09.csv"
+    },
+    {
+      "area": "Kyushu",
+      "datetime_jst": "2026-10-19 22:30:00+09:00",
+      "solar_actual_mw": -2,
+      "source_file": "data/raw/Kyushu/eria_jukyu_202610_09.csv"
+    },
+    {
+      "area": "Kyushu",
+      "datetime_jst": "2026-10-28 21:30:00+09:00",
+      "solar_actual_mw": -2,
+      "source_file": "data/raw/Kyushu/eria_jukyu_202610_09.csv"
+    },
+    {
+      "area": "Kyushu",
+      "datetime_jst": "2026-10-31 23:30:00+09:00",
+      "solar_actual_mw": -2,
+      "source_file": "data/raw/Kyushu/eria_jukyu_202610_09.csv"
+    }
+  ],
+  "balance_residual_mw": {
+    "Kansai": {
+      "median_abs": 0.0,
+      "max_abs": 0.0,
+      "p99_abs": 0.0
+    },
+    "Kyushu": {
+      "median_abs": 0.0,
+      "max_abs": 32.0,
+      "p99_abs": 10.0
+    },
+    "Tokyo": {
+      "median_abs": 1.0,
+      "max_abs": 6.0,
+      "p99_abs": 2.0
+    }
+  },
+  "price_join_missing": 0
+}

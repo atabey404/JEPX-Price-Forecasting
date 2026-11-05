@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "JEPX_Stage2_Price_Data_20261105.zip",
+    "bytes": 32208110,
+    "sha256": "a12c24f3a262cda28da5e35ac42f90cb5a070cac33d5bcdcb8fe846c8dda5501",
+    "download_url": "https://github.com/atabey404/JEPX-Price-Forecasting/releases/download/v0.2.0-data-20261105/JEPX_Stage2_Price_Data_20261105.zip"
+  },
+  {
+    "filename": "JEPX_Stage2_Step2_Supply_Generation_20261105.zip",
+    "bytes": 35756598,
+    "sha256": "6b4583ec3600573f17dde30da20c9c8223afb7c8b893c68269f641836aa7bbb9",
+    "download_url": "https://github.com/atabey404/JEPX-Price-Forecasting/releases/download/v0.2.0-data-20261105/JEPX_Stage2_Step2_Supply_Generation_20261105.zip"
+  },
+  {
+    "filename": "JEPX_Stage2_Step3_Weather_Forecast_20261105.zip",
+    "bytes": 22526613,
+    "sha256": "b56423eee96f9a6bf79ac17a5304523a11c71fd311e77bd2354cf8d3295d36a4",
+    "download_url": "https://github.com/atabey404/JEPX-Price-Forecasting/releases/download/v0.2.0-data-20261105/JEPX_Stage2_Step3_Weather_Forecast_20261105.zip"
+  }
+]

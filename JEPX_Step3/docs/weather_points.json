@@ -1,0 +1,56 @@
+[
+  {
+    "area": "Tokyo",
+    "point_id": "tokyo",
+    "latitude": 35.68,
+    "longitude": 139.76
+  },
+  {
+    "area": "Tokyo",
+    "point_id": "maebashi",
+    "latitude": 36.39,
+    "longitude": 139.06
+  },
+  {
+    "area": "Tokyo",
+    "point_id": "choshi",
+    "latitude": 35.73,
+    "longitude": 140.83
+  },
+  {
+    "area": "Kansai",
+    "point_id": "osaka",
+    "latitude": 34.69,
+    "longitude": 135.5
+  },
+  {
+    "area": "Kansai",
+    "point_id": "kyoto",
+    "latitude": 35.01,
+    "longitude": 135.77
+  },
+  {
+    "area": "Kansai",
+    "point_id": "wakayama",
+    "latitude": 34.23,
+    "longitude": 135.17
+  },
+  {
+    "area": "Kyushu",
+    "point_id": "fukuoka",
+    "latitude": 33.59,
+    "longitude": 130.4
+  },
+  {
+    "area": "Kyushu",
+    "point_id": "kumamoto",
+    "latitude": 32.8,
+    "longitude": 130.71
+  },
+  {
+    "area": "Kyushu",
+    "point_id": "kagoshima",
+    "latitude": 31.6,
+    "longitude": 130.56
+  }
+]

@@ -1,0 +1,7 @@
+dataset,provider,source_url,scope,availability_rule,use
+ERA5,Open-Meteo / ECMWF Copernicus,https://open-meteo.com/en/docs/historical-weather-api,2016-04-01 to 2026-10-31; 9 points,reanalysis after valid time; not historical forecast,reference only
+GFS single runs,Open-Meteo / NOAA,https://open-meteo.com/en/docs/single-runs-api,delivery 2026-04-04 to 2026-11-06; 9 points,D-2 12UTC run; assumed 12h processing lag; no historical first server availability,conditional as-of research
+Tokyo forecast archive,TEPCO,https://www.tepco.co.jp/forecast/html/area-download-j.html,2026-10; 31 days,prior-evening publication; archive file updates after bid cutoff,research-only excluded
+Kansai forecast archive,Kansai TD,https://www.kansai-td.co.jp/denkiyoho/imbalance/index.html,2026-10; 31 days,archive file timestamps after bid cutoff,research-only excluded
+Kyushu forecast archive,Kyushu TD,https://www.kyuden.co.jp/td_power_usages/jukyuHistory_202610.html,2026-10; 31 days,archive file timestamps after bid cutoff,research-only excluded
+JEPX bid cutoff,JEPX,https://www.jepx.jp/electricpower/outline/pdf/Guide_2.00.pdf,D-1 10:00 JST,bid cutoff defines as-of time,time contract

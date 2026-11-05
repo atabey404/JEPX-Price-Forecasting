@@ -1,0 +1,17 @@
+{
+  "kind": "reanalysis",
+  "rows": 835056,
+  "start": "2016-04-01 00:00:00+09:00",
+  "end": "2026-10-31 23:00:00+09:00",
+  "point_count": 9,
+  "missing": {
+    "temperature_2m": 135,
+    "relative_humidity_2m": 135,
+    "wind_speed_10m": 135,
+    "wind_speed_100m": 135,
+    "shortwave_radiation": 135,
+    "cloud_cover": 135,
+    "precipitation": 135
+  },
+  "duplicate_keys": 0
+}

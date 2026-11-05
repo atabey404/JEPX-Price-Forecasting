@@ -1,0 +1,30 @@
+field,unit,meaning,availability
+demand_actual_mw,MW,demand actual mw,post-delivery actual; historical publication vintages not reconstructed
+nuclear_actual_mw,MW,nuclear actual mw,post-delivery actual; historical publication vintages not reconstructed
+thermal_actual_mw,MW,thermal actual mw,post-delivery actual; historical publication vintages not reconstructed
+hydro_actual_mw,MW,hydro actual mw,post-delivery actual; historical publication vintages not reconstructed
+geothermal_actual_mw,MW,geothermal actual mw,post-delivery actual; historical publication vintages not reconstructed
+biomass_actual_mw,MW,biomass actual mw,post-delivery actual; historical publication vintages not reconstructed
+solar_actual_mw,MW,solar actual mw,post-delivery actual; historical publication vintages not reconstructed
+solar_curtailment_mw,MW,solar curtailment mw,post-delivery actual; historical publication vintages not reconstructed
+wind_actual_mw,MW,wind actual mw,post-delivery actual; historical publication vintages not reconstructed
+wind_curtailment_mw,MW,wind curtailment mw,post-delivery actual; historical publication vintages not reconstructed
+pumped_storage_net_mw,MW,pumped storage net mw,post-delivery actual; historical publication vintages not reconstructed
+interconnector_net_import_mw,MW,interconnector net import mw,post-delivery actual; historical publication vintages not reconstructed
+datetime_jst,,datetime jst,metadata
+area,,area,metadata
+interval_minutes,,interval minutes,metadata
+source_file,,source file,metadata
+source_unit,,source unit,metadata
+data_kind,,data kind,metadata
+delivery_date,,delivery date,metadata
+time_slot,,time slot,metadata
+thermal_lng_actual_mw,MW,thermal lng actual mw,post-delivery actual; historical publication vintages not reconstructed
+thermal_coal_actual_mw,MW,thermal coal actual mw,post-delivery actual; historical publication vintages not reconstructed
+thermal_oil_actual_mw,MW,thermal oil actual mw,post-delivery actual; historical publication vintages not reconstructed
+thermal_other_actual_mw,MW,thermal other actual mw,post-delivery actual; historical publication vintages not reconstructed
+battery_net_mw,MW,battery net mw,post-delivery actual; historical publication vintages not reconstructed
+other_actual_mw,MW,other actual mw,post-delivery actual; historical publication vintages not reconstructed
+supply_total_reported_mw,MW,supply total reported mw,post-delivery actual; historical publication vintages not reconstructed
+thermal_curtailment_mw,MW,thermal curtailment mw,post-delivery actual; historical publication vintages not reconstructed
+biomass_curtailment_mw,MW,biomass curtailment mw,post-delivery actual; historical publication vintages not reconstructed
