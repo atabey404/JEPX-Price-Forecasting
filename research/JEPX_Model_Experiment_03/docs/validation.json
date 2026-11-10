@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "prior_forecast_hash_unchanged": true,
+  "completed_prospective_delivery_days": 1,
+  "completed_physical_delivery_days": 0,
+  "scored_slots": 144,
+  "scored_method_area_groups": 9,
+  "new_forecast_rows": 144,
+  "new_forecast_models_replayed": 3,
+  "new_target_absent": true,
+  "next_delivery_date": "2026-11-12",
+  "same_frozen_spec": true,
+  "platform_ready": false
+}

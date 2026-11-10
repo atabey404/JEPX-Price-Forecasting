@@ -1,0 +1,11 @@
+{
+  "latest_price_delivery_date": "2026-11-10",
+  "next_unpriced_delivery_date": "2026-11-11",
+  "bid_cutoff_jst": "2026-11-10 10:00:00+09:00",
+  "checked_at_jst": "2026-11-09 17:09:53.282643+09:00",
+  "source_received_at_jst": "2026-11-09 17:05:50.653022+09:00",
+  "source_receipt_before_cutoff": true,
+  "current_time_before_cutoff": true,
+  "target_price_absent": true,
+  "weather_used": false
+}

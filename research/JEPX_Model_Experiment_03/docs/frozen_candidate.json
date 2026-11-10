@@ -1,0 +1,38 @@
+{
+  "frozen_at_utc": "2026-11-09T08:05:39.986433+00:00",
+  "candidate": "hgb_core",
+  "source_experiment_spec_sha256": "7e385a54f1cc97629024ee6b5d853825c39359a4b6a69eb4eb214f534ae09197",
+  "window_days": 84,
+  "estimator": {
+    "loss": "absolute_error",
+    "learning_rate": 0.05,
+    "max_iter": 60,
+    "max_leaf_nodes": 7,
+    "min_samples_leaf": 48,
+    "l2_regularization": 10,
+    "early_stopping": false,
+    "random_state": 42
+  },
+  "features": [
+    "price_lag_1d",
+    "price_lag_7d",
+    "price_same_slot_mean_4weeks",
+    "price_same_slot_median_7days",
+    "time_slot",
+    "hour",
+    "minute",
+    "weekday",
+    "is_weekend",
+    "month",
+    "slot_sin",
+    "slot_cos"
+  ],
+  "new_date_evaluation": [
+    "2026-11-07",
+    "2026-11-09"
+  ],
+  "new_date_status": "retrospective snapshot extension, not prospective forecasts",
+  "postprocessing": "0.01 JPY/kWh lower guard proposed subject to primary-source support; no upper clipping",
+  "parameter_search": false,
+  "platform_ready": false
+}

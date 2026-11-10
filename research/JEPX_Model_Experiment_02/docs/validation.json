@@ -1,0 +1,52 @@
+{
+  "status": "passed_with_research_limitations",
+  "old_raw_negative_count": 87,
+  "old_predictions_below_floor": 99,
+  "old_guarded_negative_count": 0,
+  "new_date_rows": 1728,
+  "new_date_days": 3,
+  "new_date_type": "retrospective_new_archive_dates_not_prospective",
+  "source_revisions": [
+    {
+      "area": "Tokyo",
+      "overlap_rows": 10416,
+      "changed_target_prices": 0,
+      "max_abs_change": 0.0
+    },
+    {
+      "area": "Kansai",
+      "overlap_rows": 10416,
+      "changed_target_prices": 0,
+      "max_abs_change": 0.0
+    },
+    {
+      "area": "Kyushu",
+      "overlap_rows": 10416,
+      "changed_target_prices": 0,
+      "max_abs_change": 0.0
+    }
+  ],
+  "feature_reconstruction_checks": [
+    {
+      "area": "Tokyo",
+      "reference_day": "2026-10-15",
+      "features_match_stage4": true
+    },
+    {
+      "area": "Kansai",
+      "reference_day": "2026-10-15",
+      "features_match_stage4": true
+    },
+    {
+      "area": "Kyushu",
+      "reference_day": "2026-10-15",
+      "features_match_stage4": true
+    }
+  ],
+  "frozen_parameters_unchanged": true,
+  "future_date_outcome_absent_at_issue": true,
+  "forward_status": "issued_before_auction_cutoff",
+  "forward_file": "data/processed/forward_20261111_20261109T080953Z.csv",
+  "completed_prospective_days": 0,
+  "platform_ready": false
+}

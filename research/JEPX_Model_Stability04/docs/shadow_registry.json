@@ -1,0 +1,42 @@
+{
+  "issued_at_utc": "2026-11-10T06:51:23.224597+00:00",
+  "delivery_date": "2026-11-12",
+  "file": "data/shadow_20261112_20261110T065123Z.csv",
+  "sha256": "15f844d451de7dbdadebe5ec0564cd8113fd0299662e8c787627eb533e8c34ea",
+  "bid_cutoff_jst": "2026-11-11 10:00:00+09:00",
+  "rows": 288,
+  "methods": [
+    "shrink_50",
+    "adaptive_28d"
+  ],
+  "prior_original_forecast_sha256": "48f8fbb9e11a6ec95890bed1b4600ed5ddbd81b49d76b15b01872ae08081f27e",
+  "prior_original_forecast_file": "data/processed/forward_20261112_20261110T022030Z.csv",
+  "source_receipt_sha256": "aa9963116d0d79bef6e6b847120df2bf80ea4ca507bcbbd07210b92c6d9ab57c",
+  "research_plan_sha256": "7ae92a71c32f2f58743fb90620c17d2a9109542ca6be97b3bc35a1ace0ca4c04",
+  "outcome_available_at_issue": false,
+  "additional_variants_not_replacement": true,
+  "completed_prospective_days_for_new_variants": 0,
+  "next_adaptive_weights": [
+    {
+      "area": "Kansai",
+      "weight": 1,
+      "history_first": "2026-10-15",
+      "history_last": "2026-11-11",
+      "days": 28
+    },
+    {
+      "area": "Kyushu",
+      "weight": 1,
+      "history_first": "2026-10-15",
+      "history_last": "2026-11-11",
+      "days": 28
+    },
+    {
+      "area": "Tokyo",
+      "weight": 1,
+      "history_first": "2026-10-15",
+      "history_last": "2026-11-11",
+      "days": 28
+    }
+  ]
+}

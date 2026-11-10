@@ -1,82 +1,45 @@
-<div align="center">
-
 # Japan JEPX Day-Ahead Price Forecasting
 
-**From market fundamentals to traceable data and time-aware forecasting evaluation.**
+[简体中文](README.md) · [English](README.en.md) · [日本語](README.ja.md)
 
-[简体中文](README.md) · **English** · [日本語](README.ja.md)
+A research project for next-day electricity prices in Tokyo, Kansai and Kyushu, with 48 half-hour intervals per area. Current milestone: four model experiments and a bilingual Kairo platform, including its dark introduction, interactive charts, interval ledger, evaluation and data export.
 
-[Download data](https://github.com/atabey404/JEPX-Price-Forecasting/releases/tag/v0.2.0-data-20261105) · [Data notes](docs/DATA_NOTES.md) · [Roadmap](docs/ROADMAP.md)
+[Open Kairo](https://jepx-observatory.brilliant-ran.chatgpt.site) (owner sign-in currently required) · [Complete data archives](https://github.com/atabey404/JEPX-Price-Forecasting/releases/tag/v0.2.0-data-20261105) · [All artifact checksums](docs/ARTIFACTS.json)
 
-Electricity markets · Time series · Weather data · Reproducible research
+## Current evidence — 10 November 2026
 
-</div>
+The core candidate uses historical prices and calendar features, with an 84-day rolling HGB residual model and 12 inputs. Weather was explored separately; the current core model is not a weather/supply/price integrated production system. Retained published prices cover delivery through 11 November and forecasts through 12 November. These are delivery dates, not the snapshot's wall-clock date.
 
-## Overview
+On the 106-day shared historical comparison (29 July–11 November), core MAE is 3.686 / 4.162 / 3.454 JPY/kWh for Tokyo / Kansai / Kyushu. The previous-day baseline is 4.157 / 4.797 / 3.762. Conservative half-correction and adaptive 28-day variants did not improve the overall result, so the core candidate remains unchanged.
 
-An incremental research project for forecasting Japan Electric Power Exchange (JEPX) day-ahead electricity prices. The eventual targets are **48 half-hourly System Prices and Area Prices per delivery day**. Initial regional work focuses on **Tokyo, Kansai, and Kyushu**, while the price archive retains all nine areas.
+**The core candidate has only one scored prospective delivery day (11 November).** Its MAE was 5.311 / 3.700 / 5.526, against previous-day baseline 4.843 / 3.718 / 4.042. New variants have zero scored prospective days. The historical comparison is exploratory and does not establish future stability. All 12 November outcomes remain pending.
 
-**The current milestone is data preparation. No price forecasting model has been trained or validated.** Historical outcomes are not presented as information known before bidding, and no forecasting accuracy is claimed.
+## Repository and data
 
-## Current snapshot
-
-Snapshot date: **2026-11-05**. Delivery times use `Asia/Tokyo`.
-
-| Component | Coverage and size | Status |
-| --- | --- | --- |
-| JEPX prices and volumes | 2005-04-02–2026-11-06; 22 fiscal-year files; 378,672 half-hour records | Downloaded, merged, checked |
-| Regional supply/generation actuals | From April 2016; 148 CSVs; 350,669 native-resolution records | Fields and units standardized |
-| Historical weather reference | Nine locations; 835,056 hourly ERA5 rows | Complete days through 2026-10-30; 135 incomplete rows on October 31 |
-| Run-specific weather forecasts | 217 delivery days, 2026-04-04–2026-11-06; 46,872 target-day hourly rows | Seven variables complete; nine days use earlier runs |
-| TSO forecast-publication audit | October 2026; 93 daily files; 4,464 half-hour slots | Audited archive versions excluded from strict pre-bid features |
-
-The forecast table also retains 1,953 auxiliary next-day-midnight records for aligning hourly mean radiation. These are additional to the 46,872 target-day rows.
-
-## Data and source code
-
-Three ZIP assets in the [release](https://github.com/atabey404/JEPX-Price-Forecasting/releases/tag/v0.2.0-data-20261105) contain raw sources, processed tables, checks, and scripts. Code and selected validation outputs are directly browsable here. [ARTIFACTS.json](docs/ARTIFACTS.json) lists download URLs, byte sizes, and SHA256 checksums.
-
-| Directory | Purpose |
+| Path | Contents |
 | --- | --- |
-| `JEPX_Project/` | Official prices, wide/long tables, daily 48-slot checks |
-| `JEPX_Step2/` | Tokyo, Kansai, and Kyushu demand/generation actuals |
-| `JEPX_Step3/` | ERA5 references, GFS forecast runs, publication audit |
-| `docs/` | Scope, limitations, sources, next steps |
+| `platform/` | Current React/Vinext source, Japanese/English UI, retained `public/data/market.json` |
+| `artifacts/` | Five complete subsequent archives: master table/baselines and experiments 01–04, including data, scripts, audits, metrics and figures |
+| `research/` | Directly browsable scripts, specifications and verification records from those archives |
+| `JEPX_Project/`, `JEPX_Step2/`, `JEPX_Step3/` | Original data preparation code and selected validation outputs |
+| `docs/ARTIFACTS.json` | All eight archive locations, byte sizes and SHA256 hashes |
 
-## Local use
+The three large original price, supply/generation and weather datasets remain downloadable in the public release linked above. They are not missing from this update. Download those three and extract the five archives in `artifacts/` into the same directory, retaining their top-level names. This preserves the complete snapshot and stage dependencies. Original archive contents and source-language notes are preserved byte-for-byte.
 
-Use Python 3.11+:
+Initial retained data include 22 fiscal-year JEPX price files, 148 supply/generation files, nine weather reference locations, run-specific GFS forecasts and a TSO publication audit. See [data notes](docs/DATA_NOTES.md), [sources](docs/SOURCES.md), and each archive's README for coverage, processing and assumptions. Verify downloaded files with the manifest before reproduction.
 
-```sh
-git clone https://github.com/atabey404/JEPX-Price-Forecasting.git
-cd JEPX-Price-Forecasting
-python -m pip install -r requirements.txt
-```
-
-Download all three release archives and **extract them into the repository root, preserving their top-level directory names**. The archives contain raw data and source-page snapshots required by some scripts. Then reproduce the transformations and checks:
+## Run the platform
 
 ```sh
-python JEPX_Project/scripts/process_validate.py
-python JEPX_Step2/scripts/normalize_supply.py
-python JEPX_Step2/scripts/validate_supply.py
-python JEPX_Step3/scripts/normalize_weather.py
-python JEPX_Step3/scripts/validate_step3.py
+cd platform
+npm ci
+npm run dev
 ```
 
-Download and forecast-gap scripts are included. External retrieval is subject to rate limits, coverage, and source revisions. Reprocessing the retained snapshot is different from downloading a newer version.
+Node 22.13+ is required. See [hosting notes](platform/HOSTING.md) for creating your own deployment. The original deployment identity, credentials, runtime state and dependencies are excluded from this public source copy. Python research uses each archive's requirements and scripts; extract dependencies before running them.
 
-## Timing and limitations
+## Platform scope and next step
 
-- The bidding cutoff is **10:00 JST on the day before delivery**. A forecast published that evening is too late for that auction.
-- GFS normally uses the 12:00 UTC run from two calendar days before delivery, with an explicit **12-hour processing/publication-lag assumption**. Historical first-server availability is not verified; this is not a fully proven leakage-free dataset.
-- ERA5 is retrospective reanalysis, not an archived issued forecast. Target-day actuals are research/evaluation data, or lagged inputs only after availability constraints.
-- Older supply data are hourly; recent files are half-hourly. Native resolutions remain separate. Kyushu has overlapping hourly/half-hourly coverage in March 2024; do not double-count it.
-- Nine weather locations are preliminary point features, without load or installed-capacity weighting. They are not precise area-average weather.
+Kairo has a dark introductory site with smooth scroll-driven focus, Japanese/English switching and a bottom workspace entrance. The workspace supports area/day/model selection, 48-slot curves, historical versus prospective evaluation, source inspection, CSV export and browser-local actual-price imports. Imports do not overwrite retained predictions.
 
-## Next steps
-
-Define field-level availability rules and assemble a first master table. Establish calendar/historical-price baselines, then evaluate weather features under the stated timing assumptions using daily rolling tests. Pre-auction regional demand and renewable forecasts remain to be sourced or modeled.
-
-## Sources and use
-
-Sources include JEPX, TEPCO, Kansai T&D, Kyushu T&D, and Open-Meteo access to NOAA GFS and ECMWF/Copernicus ERA5. See [sources](docs/SOURCES.md). Original fields and source languages are retained. Public availability here does not change third-party rights or terms. Existing Chinese instructions inside the original archives remain preserved; the project README is available in three separate languages.
+This version serves a retained research dataset: 135 delivery dates and 405 area-days. Live fetching, automatic model execution and cloud-persistent uploads are not connected. Historical first-publication timestamps are not fully reconstructed; retrospective actuals and reanalysis are not assumed available before bidding. Continue collecting unchanged, timestamped pre-auction forecasts and score every retained variant against simple baselines, targeting at least 28 prospective days before considering promotion.

@@ -1,0 +1,127 @@
+{
+  "original_archives": {
+    "JEPX_Model_Experiment03_20261110.zip": "208f359ee08f6aa5cb4d926644fb71e4f60a0b15a4005a9e8e385a2b32d73a07",
+    "JEPX_Model_Experiment01_20261109.zip": "4aedd13b59dc8640546c95f88c3b827b8e2b0dcc1ef12f663d6c3c48e1bdfdd8"
+  },
+  "price_receipt": {
+    "path": "data/raw/spot_summary_2026_20261110T021940Z.csv",
+    "url": "https://www.jepx.jp/_download.php",
+    "method": "POST",
+    "form": {
+      "dir": "spot_summary",
+      "file": "spot_summary_2026.csv"
+    },
+    "retrieved_at_utc": "2026-11-10T02:19:50.363652+00:00",
+    "sha256": "aa9963116d0d79bef6e6b847120df2bf80ea4ca507bcbbd07210b92c6d9ab57c",
+    "bytes": 1418233,
+    "rows": 10800,
+    "header": [
+      "\u53d7\u6e21\u65e5",
+      "\u6642\u523b\u30b3\u30fc\u30c9",
+      "\u58f2\u308a\u5165\u672d\u91cf(kWh)",
+      "\u8cb7\u3044\u5165\u672d\u91cf(kWh)",
+      "\u7d04\u5b9a\u7dcf\u91cf(kWh)",
+      "\u30b7\u30b9\u30c6\u30e0\u30d7\u30e9\u30a4\u30b9(\u5186/kWh)",
+      "\u30a8\u30ea\u30a2\u30d7\u30e9\u30a4\u30b9\u5317\u6d77\u9053(\u5186/kWh)",
+      "\u30a8\u30ea\u30a2\u30d7\u30e9\u30a4\u30b9\u6771\u5317(\u5186/kWh)",
+      "\u30a8\u30ea\u30a2\u30d7\u30e9\u30a4\u30b9\u6771\u4eac(\u5186/kWh)",
+      "\u30a8\u30ea\u30a2\u30d7\u30e9\u30a4\u30b9\u4e2d\u90e8(\u5186/kWh)",
+      "\u30a8\u30ea\u30a2\u30d7\u30e9\u30a4\u30b9\u5317\u9678(\u5186/kWh)",
+      "\u30a8\u30ea\u30a2\u30d7\u30e9\u30a4\u30b9\u95a2\u897f(\u5186/kWh)",
+      "\u30a8\u30ea\u30a2\u30d7\u30e9\u30a4\u30b9\u4e2d\u56fd(\u5186/kWh)",
+      "\u30a8\u30ea\u30a2\u30d7\u30e9\u30a4\u30b9\u56db\u56fd(\u5186/kWh)",
+      "\u30a8\u30ea\u30a2\u30d7\u30e9\u30a4\u30b9\u4e5d\u5dde(\u5186/kWh)",
+      "\u58f2\u308a\u30d6\u30ed\u30c3\u30af\u5165\u672d\u7dcf\u91cf(kWh)",
+      "\u58f2\u308a\u30d6\u30ed\u30c3\u30af\u7d04\u5b9a\u7dcf\u91cf(kWh)",
+      "\u8cb7\u3044\u30d6\u30ed\u30c3\u30af\u5165\u672d\u7dcf\u91cf(kWh)",
+      "\u8cb7\u3044\u30d6\u30ed\u30c3\u30af\u7d04\u5b9a\u7dcf\u91cf(kWh)"
+    ]
+  },
+  "original_spec": {
+    "frozen_at_utc": "2026-11-09T08:05:39.986433+00:00",
+    "candidate": "hgb_core",
+    "source_experiment_spec_sha256": "7e385a54f1cc97629024ee6b5d853825c39359a4b6a69eb4eb214f534ae09197",
+    "window_days": 84,
+    "estimator": {
+      "loss": "absolute_error",
+      "learning_rate": 0.05,
+      "max_iter": 60,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 48,
+      "l2_regularization": 10,
+      "early_stopping": false,
+      "random_state": 42
+    },
+    "features": [
+      "price_lag_1d",
+      "price_lag_7d",
+      "price_same_slot_mean_4weeks",
+      "price_same_slot_median_7days",
+      "time_slot",
+      "hour",
+      "minute",
+      "weekday",
+      "is_weekend",
+      "month",
+      "slot_sin",
+      "slot_cos"
+    ],
+    "new_date_evaluation": [
+      "2026-11-07",
+      "2026-11-09"
+    ],
+    "new_date_status": "retrospective snapshot extension, not prospective forecasts",
+    "postprocessing": "0.01 JPY/kWh lower guard proposed subject to primary-source support; no upper clipping",
+    "parameter_search": false,
+    "platform_ready": false
+  },
+  "old_registry": [
+    {
+      "forecast_id": "forward_20261111_20261109T080953Z",
+      "file": "data/processed/forward_20261111_20261109T080953Z.csv",
+      "sha256": "dc492d649c3ae5e82729f23527b47bdb2474c473dad2b71c88e2c2d5d5dbd999",
+      "issued_at_utc": "2026-11-09T08:09:53.550678+00:00",
+      "delivery_date": "2026-11-11",
+      "bid_cutoff_jst": "2026-11-10 10:00:00+09:00",
+      "source_receipt_sha256": "4e7481616d1729b78d1f2c267b719d39d0fd35c65f8d47dfbe7e650efea7f08c",
+      "source_received_at_utc": "2026-11-09T08:05:50.653022+00:00",
+      "frozen_spec_sha256": "55e854bac3174743b4559d627088e9dd40a4dae3506a1f2c0cb29f744c2efabb",
+      "rows": 144,
+      "areas": [
+        "Tokyo",
+        "Kansai",
+        "Kyushu"
+      ],
+      "forecast_type": "pre-auction_research_prediction",
+      "input_receipt_verified_before_cutoff": true,
+      "outcome_known_at_issue": false,
+      "weather_used": false,
+      "evaluated": false,
+      "price_policy": "research lower guard 0.01; no upper clipping"
+    },
+    {
+      "forecast_id": "forward_20261112_20261110T022030Z",
+      "file": "data/processed/forward_20261112_20261110T022030Z.csv",
+      "sha256": "48f8fbb9e11a6ec95890bed1b4600ed5ddbd81b49d76b15b01872ae08081f27e",
+      "issued_at_utc": "2026-11-10T02:20:30.834911+00:00",
+      "delivery_date": "2026-11-12",
+      "bid_cutoff_jst": "2026-11-11 10:00:00+09:00",
+      "source_receipt_sha256": "aa9963116d0d79bef6e6b847120df2bf80ea4ca507bcbbd07210b92c6d9ab57c",
+      "source_received_at_utc": "2026-11-10T02:19:50.363652+00:00",
+      "frozen_spec_sha256": "55e854bac3174743b4559d627088e9dd40a4dae3506a1f2c0cb29f744c2efabb",
+      "rows": 144,
+      "areas": [
+        "Tokyo",
+        "Kansai",
+        "Kyushu"
+      ],
+      "forecast_type": "pre-auction_research_prediction",
+      "input_receipt_verified_before_cutoff": true,
+      "outcome_known_at_issue": false,
+      "weather_used": false,
+      "evaluated": false,
+      "price_policy": "research lower guard 0.01; no upper clipping",
+      "features_file": "data/processed/forward_features_20261112.csv.gz"
+    }
+  ]
+}

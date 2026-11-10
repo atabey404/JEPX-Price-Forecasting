@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "historical_prediction_rows": 77184,
+  "comparison_days": 106,
+  "comparison_samples_per_area_method": 5088,
+  "metric_groups_recalculated": 12,
+  "adaptive_past_only_checks": 12,
+  "prior_issued_forecasts_unchanged": true,
+  "shadow_rows": 288,
+  "shadow_outcomes_absent_at_issue": true,
+  "new_variants_prospective_scored_days": 0,
+  "platform_ready": false
+}

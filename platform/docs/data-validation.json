@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "deliveryDates": 135,
+  "areaDays": 405,
+  "historicalRows": 19296,
+  "pendingForecastSlots": 144,
+  "allDaysHave48Slots": true,
+  "sourceHashVerified": true,
+  "syntheticMarketData": false
+}

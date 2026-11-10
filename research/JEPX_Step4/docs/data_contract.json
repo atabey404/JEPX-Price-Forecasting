@@ -1,0 +1,110 @@
+{
+  "snapshot_inputs": "2026-11-05 archives; no new remote data downloaded",
+  "coverage": {
+    "start": "2026-04-04",
+    "end": "2026-11-06",
+    "days": 217,
+    "areas": [
+      "Tokyo",
+      "Kansai",
+      "Kyushu"
+    ],
+    "master_rows": 31248
+  },
+  "feature_allowlist": [
+    "price_lag_1d",
+    "price_lag_7d",
+    "price_same_slot_mean_4weeks",
+    "price_same_slot_median_7days",
+    "time_slot",
+    "hour",
+    "minute",
+    "weekday",
+    "is_weekend",
+    "month",
+    "slot_sin",
+    "slot_cos",
+    "weather_p1_temperature_2m",
+    "weather_p1_relative_humidity_2m",
+    "weather_p1_wind_speed_10m",
+    "weather_p1_wind_speed_100m",
+    "weather_p1_cloud_cover",
+    "weather_p1_shortwave_radiation_hour_mean",
+    "weather_p1_precipitation_hour_total",
+    "weather_p2_temperature_2m",
+    "weather_p2_relative_humidity_2m",
+    "weather_p2_wind_speed_10m",
+    "weather_p2_wind_speed_100m",
+    "weather_p2_cloud_cover",
+    "weather_p2_shortwave_radiation_hour_mean",
+    "weather_p2_precipitation_hour_total",
+    "weather_p3_temperature_2m",
+    "weather_p3_relative_humidity_2m",
+    "weather_p3_wind_speed_10m",
+    "weather_p3_wind_speed_100m",
+    "weather_p3_cloud_cover",
+    "weather_p3_shortwave_radiation_hour_mean",
+    "weather_p3_precipitation_hour_total"
+  ],
+  "core_feature_allowlist": [
+    "price_lag_1d",
+    "price_lag_7d",
+    "price_same_slot_mean_4weeks",
+    "price_same_slot_median_7days",
+    "time_slot",
+    "hour",
+    "minute",
+    "weekday",
+    "is_weekend",
+    "month",
+    "slot_sin",
+    "slot_cos"
+  ],
+  "targets": [
+    "target_area_price_jpy_kwh",
+    "target_system_price_jpy_kwh"
+  ],
+  "weather_point_mapping": {
+    "Tokyo": {
+      "p1": "choshi",
+      "p2": "maebashi",
+      "p3": "tokyo"
+    },
+    "Kansai": {
+      "p1": "kyoto",
+      "p2": "osaka",
+      "p3": "wakayama"
+    },
+    "Kyushu": {
+      "p1": "fukuoka",
+      "p2": "kagoshima",
+      "p3": "kumamoto"
+    }
+  },
+  "weather_assumption": "12h processing/publication lag; historical first-server availability unverified",
+  "price_assumption": "prior delivery-day auction prices assumed available by preceding 12:00 JST; historical revisions not reconstructed",
+  "weather_alignment": {
+    "instantaneous": "linear interpolation at :30 from the same run; exact value at :00",
+    "radiation": "hour-ending t+1 source average repeated for both target half-hours [t,t+1)",
+    "precipitation": "hour-ending t+1 source total as covariate; not a half-hour rainfall total"
+  },
+  "holiday_feature": "not included; no authoritative holiday table joined in this version",
+  "evaluation": {
+    "development": [
+      "2026-04-04",
+      "2026-06-30"
+    ],
+    "holdout": [
+      "2026-07-01",
+      "2026-11-06"
+    ],
+    "methods": [
+      "previous_day",
+      "previous_week",
+      "four_week_same_slot_mean",
+      "seven_day_same_slot_median"
+    ],
+    "note": "predeclared deterministic price-only baselines; no method selected or tuned on holdout; later dates may use prior known auction prices"
+  },
+  "system_weather": "not assembled; regional points are not a nationwide weather proxy"
+}

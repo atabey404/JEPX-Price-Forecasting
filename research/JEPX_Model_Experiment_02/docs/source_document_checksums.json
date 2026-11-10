@@ -1,0 +1,26 @@
+[
+  {
+    "file": "tr_rules_dtl.pdf",
+    "sha256": "a0200978c2da74b0ccd9fd54f41be72007511a7c65178d6e59d6e8b15761fd53"
+  },
+  {
+    "file": "official_price_format.pdf",
+    "sha256": "574210df5d698289dc580ab4cda273f0e200a3324984beff0de057e07064f590"
+  },
+  {
+    "file": "tr_rules.pdf",
+    "sha256": "496b25bd2b6700bef24c6a46e7235e9dd63cfa2276a6e30e5f0f0430b2b5de28"
+  },
+  {
+    "file": "market_outline.html",
+    "sha256": "ff0eb1c91258fc774f38afed9f4e9cd2003e348494ccc055c4e16b3bdbb9649b"
+  },
+  {
+    "file": "tr_rules_dtl.txt",
+    "sha256": "eb00abdd21032aa69e0d014e6d6c08d967325301b18a9b8b587a74d9516f8537"
+  },
+  {
+    "file": "tr_rules.txt",
+    "sha256": "3114ed5cf4758a9545635e31e1bdf691fec4ac15c52da2b8708967137136cec4"
+  }
+]

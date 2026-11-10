@@ -1,11 +1,9 @@
 # Roadmap
 
-- Completed: market-mechanism learning and Stage 2 price collection.
-- Completed: Tokyo, Kansai, and Kyushu actual supply/generation collection.
-- Completed: preliminary point weather archive, run-specific forecast archive, and a one-month TSO publication audit.
-- Next: define field-level availability rules and explicit hourly-to-half-hour feature alignment.
-- Next: build the first master dataset while separating target-day observations from pre-bid inputs.
-- Next: establish seasonal/calendar/historical-price baselines, followed by daily rolling tests with documented weather-availability assumptions.
-- Later: obtain or model pre-auction regional demand/renewable forecasts; investigate reserve margins, interconnectors, outages, and fuel costs.
+Updated 2026-11-10.
 
-No price model performance, deployment readiness, or trading profitability is claimed at this stage.
+Completed: original price/supply/weather snapshots; master table and baselines; experiments 01–04; retained pre-auction forecast registry; bilingual dark Kairo introduction and research workspace. Full data and research snapshots are indexed in ARTIFACTS.json.
+
+Current model status: candidate, not validated production. Keep the original 84-day HGB; neither conservative variant improved overall historical MAE. Only one delivery day has a prospective core score.
+
+Next: collect at least 28 unchanged prospective delivery-day results; report all retained variants and baselines; reconstruct field-level first-availability evidence; evaluate publication timing and drift; connect live ingestion and automatic inference only with a tested pre-auction schedule and provenance. Do not promote using exploratory historical metrics alone.

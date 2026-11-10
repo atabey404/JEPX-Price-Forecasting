@@ -1,0 +1,8 @@
+{
+  "scored_at_utc": "2026-11-10T02:20:02.371503+00:00",
+  "outcome_file_sha256": "aa9963116d0d79bef6e6b847120df2bf80ea4ca507bcbbd07210b92c6d9ab57c",
+  "forecast_ids": [
+    "forward_20261111_20261109T080953Z"
+  ],
+  "prediction_files_modified": false
+}

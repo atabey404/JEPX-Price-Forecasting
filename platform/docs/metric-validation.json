@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "dates": 135,
+  "areaDays": 405,
+  "referenceMetricGroups": 6,
+  "pendingOutcomesRemainNull": true,
+  "historicalVsProspectiveSeparated": true,
+  "snapshotAutoUpdates": false
+}

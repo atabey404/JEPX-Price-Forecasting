@@ -16,5 +16,35 @@
     "bytes": 22526613,
     "sha256": "b56423eee96f9a6bf79ac17a5304523a11c71fd311e77bd2354cf8d3295d36a4",
     "download_url": "https://github.com/atabey404/JEPX-Price-Forecasting/releases/download/v0.2.0-data-20261105/JEPX_Stage2_Step3_Weather_Forecast_20261105.zip"
+  },
+  {
+    "filename": "JEPX_Model_Experiment01_20261109.zip",
+    "bytes": 1903852,
+    "sha256": "4aedd13b59dc8640546c95f88c3b827b8e2b0dcc1ef12f663d6c3c48e1bdfdd8",
+    "repository_path": "artifacts/JEPX_Model_Experiment01_20261109.zip"
+  },
+  {
+    "filename": "JEPX_Model_Experiment02_20261109.zip",
+    "bytes": 914823,
+    "sha256": "95c8ec03b2fe9acbc8182debcb2010e4ac2dea0b15d4649a9760adb6d078342c",
+    "repository_path": "artifacts/JEPX_Model_Experiment02_20261109.zip"
+  },
+  {
+    "filename": "JEPX_Model_Experiment03_20261110.zip",
+    "bytes": 1708813,
+    "sha256": "208f359ee08f6aa5cb4d926644fb71e4f60a0b15a4005a9e8e385a2b32d73a07",
+    "repository_path": "artifacts/JEPX_Model_Experiment03_20261110.zip"
+  },
+  {
+    "filename": "JEPX_Model_Stability04_20261110.zip",
+    "bytes": 5470857,
+    "sha256": "5182ecce735121628787241bb31ec0156acb6b2c624c37a9977bf4a68db21916",
+    "repository_path": "artifacts/JEPX_Model_Stability04_20261110.zip"
+  },
+  {
+    "filename": "JEPX_Stage2_Step4_Master_Baselines_20261109.zip",
+    "bytes": 6686306,
+    "sha256": "1bda9e9b3b8791ae07714448ba6607845a6b0e8dffd2ace9ec978130d4c1e54e",
+    "repository_path": "artifacts/JEPX_Stage2_Step4_Master_Baselines_20261109.zip"
   }
 ]

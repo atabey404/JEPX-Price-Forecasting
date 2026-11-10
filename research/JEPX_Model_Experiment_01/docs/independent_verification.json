@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "independent_MAE_RMSE_groups": 18,
+  "saved_estimator_replay_models": 12,
+  "training_label_and_prediction_date_separation": true,
+  "ridge_scaler_training_mean_check": true,
+  "negative_predictions_preserved": 87,
+  "model_stability_claim": false
+}

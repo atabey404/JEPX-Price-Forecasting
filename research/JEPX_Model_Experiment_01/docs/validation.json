@@ -1,0 +1,33 @@
+{
+  "status": "computed_with_documented_availability_assumptions",
+  "source_sha256": "6c5c18b57faaf79de7834a4d0b79014c396a4a1ece63407222acff465d4a457e",
+  "sklearn_version": "1.8.0",
+  "prediction_rows": 111456,
+  "daily_fits": 1548,
+  "training_rows_per_fit": 4032,
+  "test_rows_per_fit": 48,
+  "parameter_search": false,
+  "scalers_fit_on_training_only": true,
+  "early_stopping": false,
+  "target_label_perturbation_invariance": true,
+  "all_temporal_order_checks_passed": true,
+  "strict_weather_availability_verified": false,
+  "prospective_evaluation_completed": false,
+  "negative_prediction_count": 87,
+  "gates": {
+    "hgb": {
+      "retrospective_candidate_gate": true,
+      "weather_increment_gate": false,
+      "monthly_stability_gate": true,
+      "retrospective_all_gates_passed": false,
+      "platform_ready": false
+    },
+    "ridge": {
+      "retrospective_candidate_gate": true,
+      "weather_increment_gate": false,
+      "monthly_stability_gate": false,
+      "retrospective_all_gates_passed": false,
+      "platform_ready": false
+    }
+  }
+}

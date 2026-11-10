@@ -1,0 +1,99 @@
+{
+  "created_before_scoring": true,
+  "areas": [
+    "Tokyo",
+    "Kansai",
+    "Kyushu"
+  ],
+  "period": [
+    "2026-07-01",
+    "2026-11-06"
+  ],
+  "training_window_days": 84,
+  "daily_refit": true,
+  "target": "target area price minus previous-day same-slot price",
+  "algorithms": {
+    "ridge": {
+      "alpha": 100,
+      "scaling": "fit on each training window only",
+      "categoricals": [
+        "time_slot",
+        "weekday",
+        "month"
+      ]
+    },
+    "hgb": {
+      "loss": "absolute_error",
+      "learning_rate": 0.05,
+      "max_iter": 60,
+      "max_leaf_nodes": 7,
+      "min_samples_leaf": 48,
+      "l2_regularization": 10,
+      "early_stopping": false,
+      "random_state": 42
+    }
+  },
+  "core_features": [
+    "price_lag_1d",
+    "price_lag_7d",
+    "price_same_slot_mean_4weeks",
+    "price_same_slot_median_7days",
+    "time_slot",
+    "hour",
+    "minute",
+    "weekday",
+    "is_weekend",
+    "month",
+    "slot_sin",
+    "slot_cos"
+  ],
+  "weather_features": [
+    "price_lag_1d",
+    "price_lag_7d",
+    "price_same_slot_mean_4weeks",
+    "price_same_slot_median_7days",
+    "time_slot",
+    "hour",
+    "minute",
+    "weekday",
+    "is_weekend",
+    "month",
+    "slot_sin",
+    "slot_cos",
+    "weather_p1_temperature_2m",
+    "weather_p1_relative_humidity_2m",
+    "weather_p1_wind_speed_10m",
+    "weather_p1_wind_speed_100m",
+    "weather_p1_cloud_cover",
+    "weather_p1_shortwave_radiation_hour_mean",
+    "weather_p1_precipitation_hour_total",
+    "weather_p2_temperature_2m",
+    "weather_p2_relative_humidity_2m",
+    "weather_p2_wind_speed_10m",
+    "weather_p2_wind_speed_100m",
+    "weather_p2_cloud_cover",
+    "weather_p2_shortwave_radiation_hour_mean",
+    "weather_p2_precipitation_hour_total",
+    "weather_p3_temperature_2m",
+    "weather_p3_relative_humidity_2m",
+    "weather_p3_wind_speed_10m",
+    "weather_p3_wind_speed_100m",
+    "weather_p3_cloud_cover",
+    "weather_p3_shortwave_radiation_hour_mean",
+    "weather_p3_precipitation_hour_total"
+  ],
+  "training_labels": "prior delivery-day auction prices, already cleared under Stage4 timing assumptions",
+  "postprocessing": "none; negative predictions retained and counted",
+  "selection_policy": "fixed algorithms/parameters; no search or tuning using the evaluation period",
+  "limitations": [
+    "July-November baseline period was already inspected in Stage4; this is reused retrospective evaluation, not untouched prospective testing",
+    "12h weather availability assumption; historical first-availability unverified",
+    "No holiday table, regional pre-auction demand/renewable forecasts, interconnectors, outages or fuel features"
+  ],
+  "gates": {
+    "model_candidate": "at least 5% MAE reduction versus previous-day in every area",
+    "weather_increment": "at least 5% MAE gain in >=2 areas, no area degrades >2%, and paired 95% block-bootstrap upper bound <0 in every area",
+    "monthly_stability": "at least 3 of 4 full months improve versus previous-day in every area",
+    "deployment": "also requires verified source timing and 30 consecutive prospective delivery days; retrospective results alone cannot open platform deployment gate"
+  }
+}

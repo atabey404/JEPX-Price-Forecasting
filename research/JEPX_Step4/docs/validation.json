@@ -1,0 +1,23 @@
+{
+  "status": "passed_with_documented_availability_assumptions",
+  "source_price_rows": 378672,
+  "source_weather_rows": 48825,
+  "master_rows": 31248,
+  "baseline_prediction_rows": 166656,
+  "duplicate_master_keys": 0,
+  "missing_master_cells": 0,
+  "days": 217,
+  "slots_per_area_day": 48,
+  "weather_points_per_area": 3,
+  "complete_holdout_days": 129,
+  "future_price_perturbation_invariance": true,
+  "weather_temporal_order_check": true,
+  "weather_radiation_alignment_spot_check": true,
+  "independent_MAE_recalculation": true,
+  "strict_weather_availability_verified": false,
+  "weather_assumption": "12h lag",
+  "source_sha256": {
+    "JEPX_Project/data/processed/price_30min.csv": "b8a772852878549f58c4f8df6e3df30aba4882f376c00db131872c42c55d5012",
+    "JEPX_Step3/data/processed/weather_forecast_hourly.csv.gz": "46d07532072e79dbaa0bc539d336e6bb7ef613bfc22a988f4d799054f754e87d"
+  }
+}

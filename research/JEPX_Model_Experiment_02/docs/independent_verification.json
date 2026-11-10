@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "new_date_metric_groups_verified": 12,
+  "new_date_rows": 1728,
+  "forecast_rows": 144,
+  "forecast_estimator_replay_models": 3,
+  "source_receipt_before_issue_before_cutoff": true,
+  "forward_target_absent_from_source": true,
+  "prior_parameter_freeze_verified": true,
+  "forecast_sha256": "dc492d649c3ae5e82729f23527b47bdb2474c473dad2b71c88e2c2d5d5dbd999",
+  "prospective_outcomes_evaluated": false,
+  "completed_prospective_delivery_days": 0
+}
