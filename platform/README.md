@@ -25,7 +25,8 @@ This version is a functioning research workspace over retained data. It is **not
 
 ```sh
 npm install
-npm run dev
+npm run build:pages
+npx vite preview --config vite.pages.config.mjs
 npx tsc --noEmit
 python scripts/validate_dataset.py
 npm run build

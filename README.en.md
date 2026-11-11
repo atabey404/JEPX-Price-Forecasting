@@ -4,7 +4,7 @@
 
 A research project for next-day electricity prices in Tokyo, Kansai and Kyushu, with 48 half-hour intervals per area. Current milestone: four model experiments and a bilingual Kairo platform, including its dark introduction, interactive charts, interval ledger, evaluation and data export.
 
-[Open Kairo](https://jepx-observatory.brilliant-ran.chatgpt.site) (owner sign-in currently required) · [Complete data archives](https://github.com/atabey404/JEPX-Price-Forecasting/releases/tag/v0.2.0-data-20261105) · [All artifact checksums](docs/ARTIFACTS.json)
+[Open Kairo](https://atabey404.github.io/JEPX-Price-Forecasting/) · [Complete data archives](https://github.com/atabey404/JEPX-Price-Forecasting/releases/tag/v0.2.0-data-20261105) · [All artifact checksums](docs/ARTIFACTS.json)
 
 ## Current evidence — 10 November 2026
 
@@ -33,7 +33,8 @@ Initial retained data include 22 fiscal-year JEPX price files, 148 supply/genera
 ```sh
 cd platform
 npm ci
-npm run dev
+npm run build:pages
+npx vite preview --config vite.pages.config.mjs
 ```
 
 Node 22.13+ is required. See [hosting notes](platform/HOSTING.md) for creating your own deployment. The original deployment identity, credentials, runtime state and dependencies are excluded from this public source copy. Python research uses each archive's requirements and scripts; extract dependencies before running them.

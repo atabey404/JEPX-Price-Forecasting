@@ -4,7 +4,7 @@
 
 東京・関西・九州を対象に、翌日の電力価格を1日48コマで研究するプロジェクトです。主データ整備、4回のモデル実験、日本語・英語対応の Kairo プラットフォームを実装しました。
 
-[Kairo を開く](https://jepx-observatory.brilliant-ran.chatgpt.site)（現在は所有者のログインが必要） · [初期データ全体](https://github.com/atabey404/JEPX-Price-Forecasting/releases/tag/v0.2.0-data-20261105) · [全アーカイブとハッシュ](docs/ARTIFACTS.json)
+[Kairo を開く](https://atabey404.github.io/JEPX-Price-Forecasting/) · [初期データ全体](https://github.com/atabey404/JEPX-Price-Forecasting/releases/tag/v0.2.0-data-20261105) · [全アーカイブとハッシュ](docs/ARTIFACTS.json)
 
 ## 現在の状況 — 2026年11月10日
 
@@ -33,7 +33,8 @@
 ```sh
 cd platform
 npm ci
-npm run dev
+npm run build:pages
+npx vite preview --config vite.pages.config.mjs
 ```
 
 Node 22.13+ が必要です。新しい環境への公開方法は [HOSTING](platform/HOSTING.md) を参照してください。元サイトの識別情報、認証情報、実行状態、依存ディレクトリは含めません。Python 実験は各アーカイブの依存関係と説明に従って実行します。

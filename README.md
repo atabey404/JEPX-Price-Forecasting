@@ -4,7 +4,7 @@
 
 研究东京、关西、九州次日的电价，每个地区每天输出48个半小时时段。目前已完成主数据底座、四轮模型实验，以及日英双语 Kairo 平台的介绍页、预测曲线、时段明细、历史核验和导出功能。
 
-[打开 Kairo 平台](https://jepx-observatory.brilliant-ran.chatgpt.site)（目前需所有者登录） · [早期完整数据下载](https://github.com/atabey404/JEPX-Price-Forecasting/releases/tag/v0.2.0-data-20261105) · [全部数据包及校验值](docs/ARTIFACTS.json)
+[打开 Kairo 平台](https://atabey404.github.io/JEPX-Price-Forecasting/) · [早期完整数据下载](https://github.com/atabey404/JEPX-Price-Forecasting/releases/tag/v0.2.0-data-20261105) · [全部数据包及校验值](docs/ARTIFACTS.json)
 
 ## 当前进展：2026年11月10日
 
@@ -33,7 +33,8 @@
 ```sh
 cd platform
 npm ci
-npm run dev
+npm run build:pages
+npx vite preview --config vite.pages.config.mjs
 ```
 
 需要 Node 22.13+。独立部署见 [HOSTING](platform/HOSTING.md)。公开代码不含原站点绑定、凭据、运行状态和依赖目录。Python 实验请按对应包的依赖与说明运行，并先解压其上游输入。
